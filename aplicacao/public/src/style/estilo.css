@@ -1,0 +1,7 @@
+ body *{
+    box-shadow: inset 0px 0px 0px 1px rgba(255, 102, 0, 0.1);
+}
+
+.cor{
+    color: blue;
+}
