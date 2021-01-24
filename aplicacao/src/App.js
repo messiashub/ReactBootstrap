@@ -1,4 +1,4 @@
-
+import React, { Component } from 'react'
 import './App.css';
 import NavBar from './ui/NavBar';
 import Home from './container/Home';
@@ -6,18 +6,16 @@ import Home from './container/Home';
 
 
 
-function App() {
-  const logo = 'Dev'
-  return (
-    <div className="container">
-      
-      <NavBar  logo={logo}/>
-      <Home />
-
-    
-
-    </div>
-  );
+class App extends Component {
+  
+  render() {
+    const logo = 'Dev'
+    return (
+      <div className="container">
+        <NavBar logo={logo} />
+        {this.props.children}
+      </div>
+    );
+  }
 }
-
 export default App;
