@@ -10,7 +10,7 @@ const HomeCard = (props) => {
                     <div className="card-body">
                         <h5 className="card-title">{props.title}</h5>
                         <p className="card-text cor">{props.text}</p>
-                        <a href="#" className="btn btn-primary" onClick={props.action}>Go somewhere</a>
+                        <button className="btn btn-primary" onClick={props.action}>{props.title}</button>
                     </div>
             </div>
         </div>

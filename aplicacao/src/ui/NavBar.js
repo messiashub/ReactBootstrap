@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router'
 
 
 const NavBar = (props) => {
@@ -8,18 +9,21 @@ const NavBar = (props) => {
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <a className="navbar-brand " href="#">{props.logo}</a>
+                <Link to='/' className="navbar-brand ">{props.logo}</Link>
 
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li className="nav-item active">
-                            <a className="nav-link text-success" href="#">Home <span className="sr-only">(current)</span></a>
+                            <Link to='/releases' className="nav-link text success">Releases</Link>
+                            {/* <a className="nav-link text-success" href="#">Home <span className="sr-only">(current)</span></a> */}
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Link</a>
+                            <Link to='/backlog' className="nav-link text success">Backlog</Link>
+                            {/* <a className="nav-link" href="#">Link</a> */}
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+                            <Link to='/sprints' className="nav-link text success">Sprint</Link>
+                            {/* <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a> */}
                         </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">

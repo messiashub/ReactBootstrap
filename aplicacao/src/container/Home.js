@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import HomeCard from '../ui/HomeCard'
+import {hashHistory} from 'react-router'
 import img1 from '../assets/katerine.jpg';
 import img2 from '../assets/gal.jpg'
 import img3 from '../assets/angelina.jpg'
@@ -10,19 +11,19 @@ export default class Home extends Component {
         img:img1,
         title: 'Releases',
         text: 'Manage Release',
-        action: () => alert('Releases Clicked'),
+        action: () => hashHistory.push('/releases'),
     }
     homeCardBacklog = {
         img:img2,
         title: 'Backlog',
         text: 'Manage Backlog',
-        action: () => alert('Backlog Clicked'),
+        action: () => hashHistory.push('/backlog'),
     }
     homeCardSprints = {
         img:img3,
         title: 'Sprints',
         text: 'Manage Sprints',
-        action: () => alert('Sprints Clicked'),
+        action: () => hashHistory.push('/sprints'),
     }
     render() {
         return (
